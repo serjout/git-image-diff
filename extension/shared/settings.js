@@ -16,7 +16,7 @@
       diffMask: false,
       checkerboard: false,
     },
-    defaultAlgo: "",
+    defaultAlgo: "overlay",
     zoomSettings: {
       zoomIncreasePerc: 200,
       enableZoom: true,
