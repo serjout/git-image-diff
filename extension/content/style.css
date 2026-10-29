@@ -1,0 +1,49 @@
+.diffView {
+  width: var(--diff-width);
+  margin: 0 auto;
+  padding-bottom: 30px;
+}
+
+.diffFrame {
+  position: relative;
+  margin-top: 10px;
+}
+
+.diffImage {
+  display: block;
+  width: var(--diff-width);
+  height: var(--diff-height);
+}
+
+.zoomable {
+  cursor: zoom-in;
+}
+
+.magnifiedImg {
+  position: absolute;
+  z-index: 99;
+  width: 340px;
+  height: 340px;
+  border: 4px solid whitesmoke;
+  border-radius: 100%;
+  box-shadow: 0 5px 10px -2px rgba(0, 0, 0, 0.3);
+  background-color: #fff;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.zoomable:hover .magnifiedImg {
+  opacity: 1;
+}
+
+@media (prefers-color-scheme: dark) {
+  .pixelMismatchView {
+    color: #fff;
+  }
+
+  .magnifiedImg {
+    background-color: #000;
+  }
+}
