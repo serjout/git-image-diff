@@ -5,7 +5,6 @@ const ext = globalThis.browser ?? globalThis.chrome;
 const ALLOWED_HOSTS = [
   "raw.githubusercontent.com",
   "media.githubusercontent.com",
-  "private-user-images.githubusercontent.com",
 ];
 
 const isAllowedSource = (src) => {
