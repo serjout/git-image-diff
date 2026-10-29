@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Better GitHub Image Diff</title>
+    <link rel="stylesheet" href="index.css" />
+    <script src="../shared/settings.js" defer></script>
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Settings</h1>
+    </header>
+    <main>
+      <form>
+        <label for="threshold">Threshold</label>
+        <input type="number" id="threshold" min="0" max="1" step="0.1" required />
+
+        <label for="alpha">Alpha</label>
+        <input type="number" id="alpha" min="0" max="1" step="0.1" required />
+
+        <label for="diffColor">Diff Color</label>
+        <input type="color" id="diffColor" />
+
+        <label for="diffColorAlt">Alt Diff Color</label>
+        <input type="color" id="diffColorAlt" />
+
+        <label for="diffMask">Show DiffMask</label>
+        <input type="checkbox" id="diffMask" />
+
+        <label for="checkerboard">Checkerboard</label>
+        <input type="checkbox" id="checkerboard" />
+
+        <label for="aaColor">AA Color</label>
+        <input type="color" id="aaColor" />
+
+        <label for="includeAA">Include AA</label>
+        <input type="checkbox" id="includeAA" />
+
+        <label for="defaultAlgo">Default Algo</label>
+        <select id="defaultAlgo">
+          <option value="">Inherit</option>
+        </select>
+
+        <label for="enableZoom">Enable Zoom</label>
+        <input type="checkbox" id="enableZoom" />
+
+        <label for="zoomIncreasePerc">Zoom Increase (%)</label>
+        <input type="number" id="zoomIncreasePerc" min="200" max="1000" step="1" required />
+
+        <button type="button" id="reset" class="secondary">Reset to Default</button>
+        <button type="submit" id="submit">Save Settings</button>
+      </form>
+    </main>
+  </body>
+</html>

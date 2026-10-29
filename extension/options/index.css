@@ -113,12 +113,3 @@ button.secondary {
 button.secondary:hover {
   background-color: var(--input-border);
 }
-
-.error-message {
-  background-color: #ff000015;
-  border-left: 4px solid #ff0000;
-  color: #ff0000;
-  margin-bottom: 1rem;
-  padding: 0.5rem;
-  border-radius: 4px;
-}

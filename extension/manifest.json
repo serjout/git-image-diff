@@ -1,0 +1,60 @@
+{
+  "manifest_version": 3,
+  "name": "Better GitHub Image Diff",
+  "description": "Adds Difference and Overlay views to image diffs in GitHub pull requests.",
+  "version": "2.0.0",
+  "author": "Tiago Silva",
+  "icons": {
+    "16": "assets/icon16.png",
+    "32": "assets/icon32.png",
+    "64": "assets/icon64.png",
+    "128": "assets/icon128.png"
+  },
+  "background": {
+    "service_worker": "background.js",
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "action": {
+    "default_popup": "options/index.html"
+  },
+  "options_ui": {
+    "page": "options/index.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://viewscreen.githubusercontent.com/*"
+      ],
+      "js": [
+        "shared/settings.js",
+        "content/diff.js",
+        "content/viewscreen.js"
+      ],
+      "css": [
+        "content/style.css"
+      ],
+      "all_frames": true
+    }
+  ],
+  "host_permissions": [
+    "https://raw.githubusercontent.com/*",
+    "https://media.githubusercontent.com/*",
+    "https://private-user-images.githubusercontent.com/*"
+  ],
+  "permissions": [
+    "storage"
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "git-image-diff@tiago",
+      "strict_min_version": "121.0",
+      "data_collection_permissions": {
+        "required": [
+          "none"
+        ]
+      }
+    }
+  }
+}
